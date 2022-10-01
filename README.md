@@ -20,21 +20,7 @@ In fact for now it provide `lcurl` API directly and needed to redesign.<br/>
 
 ## Documentation
 [lcurl API](http://lua-curl.github.io/lcurl/modules/lcurl.html)<br/>
-[Lua-cURLv2 API](http://lua-curl.github.io)<br/>
 [Lua-cURLv3 API](http://lua-curl.github.io/lcurl/modules/cURL.html)
-
-## 
-
-Original Lua-cURLv2 binding has several problems:
-
-* it can not return error codes but just raise Lua errors (Fixed. use `cURL.safe` module)
-* it raise Lua error from callback that may result resource leak in libcurl (Fixed.)
-* it does not provide building multipart/formdata explicitly (Fixed.)
-* it has memory leak when send multipart/formdata (Fixed.)
-* it does not save string for curl options that may result crush in libcurl (Fixed.)
-* there no way to get result for operations in multi interface (e.g. if one of easy operation fail you can not get result code/error message) (Fixed. But it does not very handy interface.)
-* you can not use your own callback function to perform operation with multi interface (Could not be fixed without changing API.)
-* you can not pass your context to callback functions (Could not be fixed without changing API.)
 
 ## Installation
 
